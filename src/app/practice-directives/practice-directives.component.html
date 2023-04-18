@@ -1,0 +1,9 @@
+<label>Secret Password</label>
+<p></p>
+<!-- <button class="btn btn-primary" (click)="showSecret = !showSecret">Display Details</button> -->
+<button class="btn btn-primary" (click)="onToggle()">Display Details</button>
+<p></p>
+<p *ngIf="showSecret">secret Password = tuna fish</p>
+<div *ngFor="let logItem of log"
+[ngStyle]="{backgroundColor:getColor()}"
+[ngClass]="{'white-text':logItem >= 5}">{{ logItem }}</div>
